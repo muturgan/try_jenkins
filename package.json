@@ -1,0 +1,32 @@
+{
+  "name": "try_jenkins",
+  "version": "1.0.0",
+  "description": "try_jenkins",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "test": "cross-env NODE_ENV=test jest --forceExit --detectOpenHandles --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muturgan/try_jenkins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muturgan/try_jenkins/issues"
+  },
+  "homepage": "https://github.com/muturgan/try_jenkins#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "cross-env": "^7.0.2",
+    "jest": "^25.2.7",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.8.3"
+  }
+}
