@@ -6,8 +6,8 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "predeploy": "npm run build && npm run test_after_build",
-    "test": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.ts --forceExit --detectOpenHandles --coverage --verbose",
-    "test_after_build": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.js --forceExit --detectOpenHandles --coverage --verbose"
+    "test": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.js --outputFile=coverage/result.json --json --forceExit --detectOpenHandles --coverage --verbose",
+    "test_after_build": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.js --outputFile=coverage/result.json --json --forceExit --detectOpenHandles --coverage --verbose"
   },
   "repository": {
     "type": "git",
