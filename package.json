@@ -2,10 +2,12 @@
   "name": "try_jenkins",
   "version": "1.0.0",
   "description": "try_jenkins",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "build": "rimraf dist && tsc",
-    "test": "cross-env NODE_ENV=test jest --forceExit --detectOpenHandles --coverage --verbose"
+    "predeploy": "npm run build && npm run test_after_build",
+    "test": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.ts --forceExit --detectOpenHandles --coverage --verbose",
+    "test_after_build": "cross-env NODE_ENV=test jest --config jest.config-fro-ts.js --forceExit --detectOpenHandles --coverage --verbose"
   },
   "repository": {
     "type": "git",
